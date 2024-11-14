@@ -1,0 +1,8 @@
+.App{
+  font-family: "Poppins", sans-serif;
+  
+}
+a:focus {
+  outline: none; /* Loại bỏ viền focus */
+  background-color: transparent; /* Loại bỏ màu nền khi focus */
+}

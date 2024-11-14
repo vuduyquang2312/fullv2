@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Cải thiện kiểu thanh trượt cho toàn bộ trang */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Thêm thanh cuộn cho vùng chính của ứng dụng */
+.flex-1 {
+  overflow-y: auto; /* Hiển thị thanh cuộn dọc khi cần */
+  scrollbar-width:none; /* Cho thanh cuộn mỏng */
+  scrollbar-color: #6667ba #f0f0f0; /* Đặt màu cho thanh cuộn và nền */
+}
+
+/* Tùy chỉnh thanh cuộn trên các trình duyệt Webkit (Chrome, Safari, Edge) */
+.flex-1::-webkit-scrollbar {
+  width: 2px; /* Đặt độ rộng cho thanh cuộn */
+}
+
+.flex-1::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Màu nền của track thanh cuộn */
+  border-radius: 5px;
+}
+
+.flex-1::-webkit-scrollbar-thumb {
+  background-color: #6667ba; /* Màu của thanh cuộn */
+  border-radius: 5px; /* Làm tròn góc thanh cuộn */
+}
+
+.flex-1::-webkit-scrollbar-thumb:hover {
+  background-color: #45a049; /* Màu khi hover trên thanh cuộn */
+}
+/* Hiệu ứng lắc */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake-effect {
+  animation: shake 2s ease-in-out infinite;
+}
